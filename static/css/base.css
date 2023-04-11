@@ -1,0 +1,692 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/********** Header section ************/
+
+.head {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    position: relative;
+}
+
+.head h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 50px;
+    text-align: center;
+}
+
+.head h3 {
+    float: right;
+    color: #fff;
+    margin: 10px
+}
+
+.head a {
+    text-decoration: none;
+    color: White;
+    font-size: 25px;
+    float: right;
+    margin: 10px;
+}
+
+.head a:hover {
+    font-size: 30px;
+    color: white
+}
+
+.head img {
+    width: 100px;
+    display: block;
+    float: left;
+    border-radius: 50px;
+    margin-left: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    ;
+}
+
+
+
+/********** Navbar ***********/
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+    height: 52px;
+    background-color: #071937;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    list-style: none;
+    display: inline-block;
+    transition: 0.8s;
+    padding: 14px
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #ffff;
+    text-transform: uppercase;
+}
+
+.nav ul li:hover {
+    background-color: #e11f1f;
+}
+
+
+/****** NavBar SearchBar *******/
+
+.search-bar {
+    width: 40%;
+    height: 100%;
+    background: #ffff;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    padding-right: 0;
+}
+
+.search-bar input {
+    width: 88%;
+    border: 0;
+    outline: none;
+    color: #000000;
+    font-size: 20px;
+    flex: 1
+}
+
+.search-bar button {
+    border: 0;
+    width: 12%;
+    height: 100%;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #e11f1f;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.search-bar button:active {
+    background-color: #071937;
+}
+
+.search-text {
+    font-size: 30px;
+    color: #504d4d;
+}
+
+.nav .fa-cart-shopping {
+    color: rgba(241, 242, 225, 0.94);
+    font-size: 20px;
+    margin: 10px;
+    margin-top: 15px;
+}
+
+.nav .fa-bars {
+    display: none
+}
+
+.nav .fa-xmark {
+    display: none;
+}
+
+
+
+/************Navbar Menu ************/
+
+.menu-bar {
+    text-align: center;
+    width: 5%;
+}
+
+.menu-bar ul {
+    list-style: none;
+}
+
+.menu-bar ul li {
+    padding: 0;
+    margin: 0;
+}
+
+.menu-bar ul li:hover {
+    background: transparent;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: #000000;
+    text-transform: capitalize;
+}
+
+.menu-bar .fa-user {
+    display: block;
+    color: #ffffff;
+    margin: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.sub-menue {
+    display: none;
+}
+
+.menu-bar ul li:hover .sub-menue {
+    width: 150px;
+    display: block;
+    background-color: #ffffff;
+    margin-top: 15px;
+    position: absolute;
+    right: 25px;
+    bottom: 20px
+}
+
+.menu-bar ul li:hover .sub-menue ul li {
+    width: 150px;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px dotted #000000;
+}
+
+.menu-bar ul li:hover .sub-menue ul li:last-child {
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sub-menue ul li a {
+    text-transform: capitalize;
+}
+
+.menu-bar ul li:hover .sub-menue ul li a:hover {
+    color: #747474
+}
+
+
+
+
+
+/******** contents **********/
+
+.content-container {
+    width: 90%;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 60px;
+}
+
+.content-container h1 {
+    text-align: center;
+    font-size: 25px;
+    text-transform:capitalize;
+    letter-spacing: .2em;
+}
+
+.products-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.products-card {
+    width: 250px;
+    height: 250px;
+    margin: 30px;
+}
+
+.products-card img {
+    width: 100%;
+    height: 70%;
+    
+}
+.products-card h5{
+    text-transform:uppercase;
+    text-align: left;
+    letter-spacing: .2em;
+}
+
+.product-details-card{
+    display: block;
+    width: 400px;
+    height: 700px;
+    margin-top: 20px
+}
+
+
+.product-details-card img{
+    width: 100%;
+    height: 40%;
+   
+}
+
+
+.catagories-card {
+    width: 500px;
+    height: 400px;
+    margin-top: 30px;
+    margin:auto;
+    position: relative;
+}
+
+.catagories-card img {
+    width: 100%;
+    height: 70%;
+    margin-bottom: 10px;
+}
+.catagories-card h4{
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .2em;
+}
+
+
+
+/**** Footer ******/
+.my-footer {
+    background-color:#f8f9fa;
+    height: 30px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+}
+
+.my-footer p {
+    padding-top: 5px;
+    font-size: 13px;
+    text-align: center;
+    color : #000000
+}
+
+/****Cart Page****/
+
+.my-table {
+    min-width: 400px;
+    font-size: 14px;
+}
+
+.my-thead {
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    background-color: #f8f9fa !important;
+}
+.custom-image {
+    width: 100px;
+    height: 100px;
+}
+
+.custom-a {
+    text-decoration: none;
+}
+
+.custom-icon {
+    text-decoration: none;
+    color: #868e96 !important;
+}
+
+.my-button {
+    margin-top: 5px;
+}
+/***Contact Page****/
+.contact-us{
+    width: 80%;
+    margin: auto;
+    margin-top: 40px
+}
+.contact-us div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.contact-us div .fa-solid{
+    font-size: 28px;
+    color: #000000;
+    margin: 10px;
+    margin-right: 30px
+
+}
+
+.contact-us div p{
+    padding: 0;
+}
+
+.contact-us div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+/****About us Page*****/
+.about-us{
+    width: 70%;
+    margin: auto;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.about-us p{
+    line-height: 30px;
+}
+/***Stripe Button***/
+.stripe-button-el, .my-button {
+	width: 100% !important;
+	display: block !important;
+	background-color: #868e96 !important;
+	border: 0px !important;
+	background-image: none !important;
+}
+.stripe-button-el span {
+	display: block;
+	position: relative;
+	padding: 0px 12px;
+	height: 36px !important;
+	line-height: 36px !important;
+	font-family: 'Roboto', sans-serif !important;
+	font-size: 16px !important;
+	color: #fff !important;
+	background-image: none !important;
+	background: none !important;
+}
+
+
+
+/**** Responsive pages ******/
+
+
+@media(max-width: 992px){
+    
+.head {
+    
+    height: 280px;
+}
+.head h1 {
+   
+    font-size: 40px;
+}
+.head img {
+    width: 80px;
+    display: block;
+    float: left;
+    border-radius: 50px;
+    margin-left: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    ;
+}
+    .search-bar{
+        width: 30%;
+    }
+    .search-bar input{
+        width: 80%;
+    }
+    .search-bar button{
+        width: 20%;
+    }
+}
+
+
+@media(max-width: 768px) {
+    .navLinks {
+        background-color: #e11f1f;
+        position: absolute;
+        width: 200px;
+        height: 100vh;
+        left: -200px;
+        top: 0;
+        padding-top: 15px;
+        z-index: 1;
+        text-align: left;
+        transition: 0.5s;
+    }
+    .search-bar{
+        width: 60%
+    }
+    .search-bar input{
+        width: 85%;
+    }
+    .search-bar button{
+        width:15%;
+    }
+    .nav ul li {
+        display: block
+    }
+    .nav ul li a:hover {
+        color: #e4e3e3
+    }
+    .nav .fa-bars {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .nav .fa-xmark {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .about-us{
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+        text-align: left;
+    }
+    
+    .about-us p{
+        line-height: 30px;
+    }
+    
+}
+
+@media(max-width: 576px){
+    /******Header****/
+    .head {
+        height: 250px;
+    }
+    .head h1 {
+        font-size: 30px;
+    }
+    .head h3 {
+        font-size: 20px;
+    }
+    .head img {
+        width: 80px;
+       
+    }
+    /***** NavBar ****/
+    
+
+    .nav {
+        height: 45px;
+    }
+    
+    .nav .fa-bars {
+        
+        margin: 5px;
+        margin-top: 8px;
+        font-size: 25px;
+        
+    }
+    .search-bar {
+        width: 80%;
+        padding: 0px 10px;
+        padding-right: 0px;
+        
+    }
+    .search-bar input{
+        width: 80%;
+        font-size: 15px;
+    }
+    .search-bar button{
+        width: 20%;
+        font-size: 15px;
+    }
+
+    .nav .fa-cart-shopping {
+        font-size: 20px;
+        margin: 10px;
+        
+    }
+    .nav p{
+        font-size: 10px;
+    }
+    .menu-bar .fa-user {
+        margin: 10px;
+        font-size: 20px;
+    }
+    .menu-bar ul li:hover .sub-menue {
+        width: 100px;
+        margin-top: 15px;
+        position: absolute;
+       
+    }
+    .menu-bar ul li:hover .sub-menue ul li{
+        width: 100px;
+        padding: 5px
+       
+    }
+    .menu-bar ul li:hover .sub-menue ul li a {
+       font-size: 10px;
+    }
+
+    .navLinks {
+        left: -125px;
+        width: 125px;
+        padding-top: 15px;
+       
+    }
+   .navLinks li a{
+       font-size: 12px;
+   }
+    /**** body*****/
+   
+    .content-container h1 {
+    
+        font-size: 20px;
+        
+        letter-spacing: .1em;
+    }
+    .content-container p{
+        font-size: 14px;
+    }
+    .content-container a{
+        font-size: 14px;
+    }
+    .catagories-card {
+        width: 220px;
+        height: 200px;
+       
+    }
+    .catagories-card h4{
+        font-size: 15px;
+        letter-spacing: .1em;
+    }
+    .products-card {
+        width: 150px;
+        height: 150px;
+    
+    }
+    .products-card h5{
+        font-size: 15px;
+        letter-spacing: .1em;
+    }
+    .product-details-card{
+        width: 200px;
+        margin: auto;
+        margin-top: 20px; 
+    }
+    .product-details-card img{
+        height: 20%;
+    }
+    
+   /**Cart page****/
+   .my-table {
+    min-width: 200px;
+    font-size: 10px;
+}
+
+   .my-thead {
+    
+    letter-spacing: .1em;
+
+}
+  .custom-image {
+    width: 50px;
+    height: 50px;
+}
+/***Contact Page****/
+
+.contact-us div{
+    margin-bottom: 10px;
+}
+.contact-us div .fa-solid{
+    font-size: 20px;
+    margin-right: 15px
+
+}
+
+
+.contact-us div h5{
+    font-size: 13px;
+    margin-bottom: 3px;
+    
+    
+}
+/****About us Page*****/
+.about-us{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.about-us p{
+    line-height: 26px;
+}
+
+   /****Footer****/
+   .my-footer p{
+    font-size: 10px ;
+   }
+   .my-footer {
+    height: 25px;
+}
+
+.my-footer p {
+    font-size: 10px;
+}
+        
+}
+
+
+
+    
+   
+   
+
+
+
+

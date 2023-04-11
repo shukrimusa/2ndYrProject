@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="content-container">
+    <p>You searched for "{{query}}"</p>
+    <div class="products-container">
+        {% for product in product_list %}
+        <div class="products-card">
+            <a href="{{product.get_absolute_url}}"><img src="{{product.image.url}}" alt="{{product.name}}"></a>
+            <div>
+                <h4>{{product.title}}</h4>
+                <p>€{{product.price}}</p>
+            </div>
+        </div>
+        {% empty %}
+
+        <div class="">
+            <p class="text-center search-text">No results found for <b>"{{query}}"</b> .</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

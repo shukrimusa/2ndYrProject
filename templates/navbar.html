@@ -1,0 +1,91 @@
+{% load static %}
+<!-- A grey horizontal navbar that becomes vertical on small screens -->
+<nav>
+    <div class="nav">
+
+
+        <!--This is the left side of the navbar-->
+        <div style="width:95%" class="d-flex justify-content-start flex-nowrap flex-row">
+            <i onclick='showMenu()' class="fa-solid fa-bars"></i>
+            <ul id="navLinks" class="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hidenMenu()"></i>
+                <li>
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'about' %}">About Us</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'contact' %}">Contact Us</a>
+                </li>
+                <li>
+                    <a href="{% url 'products:all_products' %}">All Products</a>
+                </li>
+
+                <!-- <a href="#" class="btn btn-primary">Log In</a>
+    <a href="#" class="btn btn-success ml-2">Sign up</a> -->
+            </ul>
+
+            <form class="search-bar" action="{% url 'search:searchResult' %}">
+                <input type="text" name="q" placeholder="Search">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> </button>
+            </form>
+
+
+            <a href="{% url 'cart:cart_detail' %}"><i class="fa-solid fa-cart-shopping">
+                </i></a>
+            <p class="text-white">{{item_count}}</p>
+
+
+
+        </div>
+
+        <!--This is the right side of the navbar-->
+        <div class="menu-bar">
+            <ul>
+                <li><a href="#">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <div class="sub-menue">
+                        <ul>
+                            {%if user.is_authenticated %}
+
+
+
+                            {% if user.profile %}
+                            <li><a href="{% url 'show_profile' user.profile.pk %}">View Profile</a></li>
+                            <li><a href="{% url 'edit_profile' user.profile.pk %}">Edit Profile</a> </li>
+                            <li><a href="{% url 'order:order_history' %}">Order Histroy</a></li>
+                            <li><a href="{% url 'password_change' %}">Change Password</a> </li>
+                            <li><a href="{% url 'password_reset' %}"> Reset Password</a> </li>
+                            <li><a href="{% url 'logout' %}">log out<output></output></a></li>
+                            {% else %}
+                            <li><a href="{% url 'order:order_history' %}">Order Histroy</a></li>
+                            <li><a href="{% url 'password_change' %}">Change Password</a> </li>
+                            <li><a href="{% url 'password_reset' %}"> Reset Password</a> </li>
+                            <li><a href="{% url 'logout' %}">log out<output></output></a></li>
+                            {% endif %}
+
+
+
+                            {% else %}
+                            <li><a href="{% url 'login' %}">Log In</a></li>
+                            <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                            {% endif %}
+
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+
+            <div>
+
+
+
+
+
+
+</nav>

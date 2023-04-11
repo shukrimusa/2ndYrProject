@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content-container">
+{% if user.is_authenticated %}
+ <h1>Edit Profile</h1>
+ <br/>
+ <div class="form-group">
+ <form method="POST">
+ {% csrf_token %}
+ {{ form.as_p }}
+ <input class="" type="submit" value="Update Profile">
+ </form>
+ </div>
+{% else %}
+You're not allowed here
+{% endif %}
+</div>
+{% endblock content %}

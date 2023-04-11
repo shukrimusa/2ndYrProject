@@ -1,0 +1,12 @@
+{% load static %}
+<header>
+      <div class="head">
+            <img id="logo" src="{% static 'images/logo.png' %}">
+            {%if user.is_authenticated %}   
+                  <h3 class="">Hi! {{user.username}}</h2>
+            {% else %}
+                  <h3>Logged out</h3>
+            {% endif %}
+            <h1 class="text-warning">COMPUTER PARTS</h1>
+      </div>
+</header>
