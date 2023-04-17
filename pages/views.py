@@ -4,7 +4,7 @@ from django.views.generic import TemplateView, DeleteView, UpdateView
 # Create your views here.
 
 class HomePageView(TemplateView):
-    template_name = 'home.html'
+    template_name = 'index.html'
 
 
 class AboutPageView(TemplateView):
